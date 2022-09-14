@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:navigationIcon="@drawable/ic_gnb_back">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="로 그 인"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <TextView
+                android:id="@+id/login_tv_comment_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="150dp"
+                android:text="먼저 로그인 해주세요 :)"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/login_et_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="이메일 입력"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/login_tv_comment_1"
+                app:layout_constraintStart_toStartOf="@+id/login_tv_comment_1"
+                app:layout_constraintTop_toBottomOf="@+id/login_tv_comment_1" />
+
+            <EditText
+                android:id="@+id/login_et_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="비밀번호 입력"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/login_et_email"
+                app:layout_constraintStart_toStartOf="@+id/login_et_email"
+                app:layout_constraintTop_toBottomOf="@+id/login_et_email" />
+
+            <Button
+                android:id="@+id/login_button_start"
+                style="@style/ButtonTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@color/yellow"
+                android:text="로 그 인"
+                app:layout_constraintEnd_toEndOf="@+id/login_et_password"
+                app:layout_constraintStart_toStartOf="@+id/login_et_password"
+                app:layout_constraintTop_toBottomOf="@+id/login_et_password" />
+
+            <TextView
+                android:id="@+id/login_tv_comment_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="회원이 아니신가요?"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/login_button_start"
+                app:layout_constraintStart_toStartOf="@+id/login_button_start"
+                app:layout_constraintTop_toBottomOf="@+id/login_button_start" />
+
+            <Button
+                android:id="@+id/login_button_signup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/yellow"
+                android:text="회원가입"
+                style="@style/ButtonTextStyle"
+                app:layout_constraintEnd_toEndOf="@+id/login_button_start"
+                app:layout_constraintStart_toStartOf="@id/login_button_start"
+                app:layout_constraintTop_toBottomOf="@+id/login_tv_comment_2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

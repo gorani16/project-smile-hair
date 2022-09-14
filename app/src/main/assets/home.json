@@ -1,0 +1,16 @@
+{
+  "title": {
+    "icon_url": "",
+    "text": "안녕하세요! 고라니님!"
+  },
+  "top_banners": [
+    {
+      "background_image_url": "",
+      "banner_id": "banner-1"
+    },
+    {
+      "background_image_url": "",
+      "banner_id": "banner-2"
+    }
+  ]
+}
